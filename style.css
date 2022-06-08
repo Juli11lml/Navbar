@@ -3,42 +3,161 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
-    background: #f2f2f2;
-    font-family: "Orbitron", Helvetica, sans-serif;
-
-}
-
-/* HEADER */
-
-.header {
-    height: 100px;
     background: #e6e0bb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 200px;
+    font-family: "Orbitron", sans-serif;
+}
+.root {
+    --marfil: #e6e0bb;
+    --blue: #0d0f45;
+    --gray: #f2f2f2;
 }
 
+a {text-decoration: none;}
+li {list-style: none;}
+
+/* NAVBAR */
+.header {
+    background: #e6e0bb;
+    padding: 3rem 2rem 5rem 2rem;
+}
+
+/* Menu */
 .menu {
-    list-style: none;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
-
-.nav-link {
-    text-decoration: none;
+.menu i {
+    font-size: 2rem;
     color: #0d0f45;
-    padding: 15px 20px;
-    border: 3px solid #0d0f45;
 }
-
+.container-link {
+    width: 70%;
+    margin: 1rem auto 0 auto;
+    order: 1;
+    text-align: center;
+    /* display: none; */
+}
+.nav-link {
+    color: #0d0f45;
+    padding: 1rem;
+    border-bottom: 2px solid #0d0f45;
+}
 .nav-link:hover {
     background: #0d0f45;
-    color: #e6e0bb;
+    color: #f2f2f2;
+}
+.nav-link:first-child {
+    border-radius: 8px 8px 0 0;
+}
+.nav-link:last-child {
+    border: none;
+    border-radius: 0 0 8px 8px;
 }
 
-.nav-link:active {
-    background: #e6e0bb;
+
+/* Landing */
+.container-landing {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    background: #f2edcb;
+}
+.img i {
+    font-size: 20rem;
+}
+.landing-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.buttons {
+    display: flex;
+    gap: 2rem;
+}
+.btn {
+    border: 2px solid #0d0f45;
+    border-radius: 8px;
+    padding: 10px 15px;
     color: #0d0f45;
+}
+.btn:hover {
+    background: #0d0f45;
+    color: #f2f2f2;
+}
+/* Texto */
+.info {
+    width: 70%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background: #0d0f45;
+    color: #f2f2f2;
+    padding: 2rem;
+    text-align: center;
+}
+
+
+@media (min-width:950px) {
+    .header {
+        padding: 2rem;
+    }
+    img .logo {
+        width: 300px;
+    }
+    .container-landing {
+        flex-direction: row;
+    }
+    .landing-info {
+        width: 50%;
+    }
+    p {
+        text-align: center;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    .img i {
+        font-size: 30rem;
+    }
+    .info p {
+        font-size: large;
+    }
+
+    .button-bars {
+        display: none;
+    }
+
+    .container-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu {
+        flex-wrap: nowrap;
+        gap: 7rem;
+    }
+    .nav-link:hover {
+        color: #e6e0bb;
+    }
+    .nav-link:first-child {
+        border-radius: 8px 0 0 0;
+    }
+    .nav-link:last-child {
+        border: none;
+        border-radius: 0 8px 0 0;
+        border-bottom: 2px solid #0d0f45;
+    }
+
 }
